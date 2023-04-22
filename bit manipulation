@@ -1,0 +1,13 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        na,nb=0,0
+        a,b=a[::-1],b[::-1]
+        for i in range(len(a)):
+            if a[i]=="1":
+                na+=2**i
+        for i in range(len(b)):
+            if b[i]=="1":
+                nb+=2**i
+        v=na+nb
+        ans=bin(v)
+        return ans[2:]
